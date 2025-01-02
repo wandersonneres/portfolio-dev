@@ -12,8 +12,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 144px;
+    padding-block: 50px;
     
     #works{
         margin-block: 56px;
@@ -27,6 +26,7 @@ main{
             border-radius: 12px;
             background-color: var(--gray-300);
             padding: 12px;
+            border: 1px solid transparent;
             img{
                 border-radius: 8px;
                 margin-bottom: 18px;
@@ -38,7 +38,7 @@ main{
         }
 
         .card:hover{
-            border: 1px solid var(--gray-400);
+            border-color:var(--gray-400);
         }
     }
 }
@@ -56,7 +56,7 @@ main{
     #services {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        align-items: flex-start;
+        /* align-items: flex-start; */
         gap: 24px;
         margin-top: 56px;
         width: 80%;
@@ -106,8 +106,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 128px;
-    padding-bottom: 200px;
+    /* padding-top: 128px;
+    padding-bottom: 200px; */
+    padding-block: 50px;
     background-image: url(../assets/images/Background_Contacts.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -121,17 +122,19 @@ main{
         margin-top: 48px;
         height: 300px;
         .card{
-            /* display: flex; */
             background-color: var(--gray-300) ;
             padding: 20px;            
+            border: 1px solid transparent;
             border-radius: 8px ;
             margin-bottom: 16px;
-            min-width: 100px;
-            max-width: 350px;
-            display: grid;
+            /* min-width: 100px;
+            max-width: 350px; */
+            width: 350px;
+            display: flex;
+            /* display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-areas: 
-            "icone tipo tipo tipo tipo tipo tipo tipo tipo tipo tipo tipo seletor"; 
+            "icone tipo tipo tipo tipo tipo tipo tipo tipo tipo tipo tipo seletor";  */
 
             i{
                 font-size: 23px;
@@ -139,28 +142,29 @@ main{
             }
             
             i:nth-child(1){
-                grid-area: icone;
+                /* grid-area: icone; */
                 padding-right: 10px;
             }
 
-            h5:nth-child(2){
+            /* h5:nth-child(2){
                 grid-area: tipo;
-            }
+            } */
 
             i:nth-child(3){
-                grid-area: seletor;
+                /* grid-area: seletor; */
+                margin-left: auto;
                 color: var(--blue);
             }
         }
 
         .card:hover{
             color: var(--blue); 
-            border: 1px solid var(--blue); 
-            transform: scale(1.01);
+            border-color: var(--blue); 
+            
             i:nth-child(1){
                 color: var(--blue);
-                font-size: 24px;
-                transition: font-size 1s;
+                transform: scale(1.1);
+                transition: transform 0.1s;
             }
 
         }
